@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exercício 6</title>
+<title>Exercício 7</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body> 
 <div class="container py-3">
-<h1>Exercício 6</h1>
+<h1>Exercício 7</h1>
 <form method="post">
 <div class="mb-3">
               <label for="numero" class="form-label">Informe um número:</label>
@@ -18,14 +18,16 @@
 </form>
 <?php 
     if($_SERVER["REQUEST_METHOD"] == "POST"){
+        
         $numero = $_POST["numero"];
+        $soma = 0;
+        $i = 0;
 
-        echo"Contando até $numero: <br>";
-
-        for($i = 0; $i < $numero; $i++){
-            $valor = $i + 1;
-            echo " $valor,";
+        while($i <= $numero){
+            $soma = $soma + $i;
+            $i++;
         }
+        echo "A soma de 1 até $numero é: " . $soma;
     }
 
 ?>
