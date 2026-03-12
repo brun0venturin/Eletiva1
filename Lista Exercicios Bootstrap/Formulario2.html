@@ -11,52 +11,99 @@
         <div class= "container mt-4"> <!--1-->
             <h1>Formulário 2</h1>
             <hr>
-            <div class="row mb-3"><!--2-->
+            <div class="row mb-3"><!--Primeira Linha-->
+
                 <div class="col-1">
                     <fieldset disabled> 
                     <label class="form-label fw-bold">Código</label>
                     <input type="number" class="form-control" id="codigo" placeholder="32">
                     </fieldset>
                 </div>
+
                 <div class="col-4">
                     <label class="form-label fw-bold">Nome</label>
                     <input type="text" class="form-control" id="nome" placeholder="Nome Completo do Cliente">
                 </div>
+
                 <div class="col-4">
                     <label class="form-label fw-bold">E-mail</label>
-                    <input type="text" class="form-control" id="email" placeholder="cliente@dominio.com">
+                    <input type="email" class="form-control" id="email" placeholder="cliente@dominio.com">
                 </div>
+
                 <div class="col-3">
                     <label class="form-label fw-bold">CPF</label>
                     <input type="number" class="form-control" id="cpf" placeholder="Somente os Números">
                 </div>
-            </div><!--2-->
-            <div class="row mb-"><!--3-->
+
+            </div><!--Primeira Linha-->
+
+            <div class="row mb-3"><!--Segunda Linha-->
+
                 <div class="col-2">
                     <label class="form-label fw-bold">N° Celular</label>
-                    <input type="number" class="form-control" id="celular" placeholder="N° celular">
+                    <input type="tel" class="form-control" id="celular" placeholder="N° celular">
                 </div>
+
                 <div class="col-2">
                     <label class="form-label fw-bold">N° Telefone Fixo</label>
-                    <input type="number" class="form-control" id="fixo" placeholder="N° telefone">
+                    <input type="tel" class="form-control" id="fixo" placeholder="N° telefone">
                 </div>
+
                 <div class="col-2">
                     <label class="form-label fw-bold">CEP</label>
                     <input type="number" class="form-control" id="cep" placeholder="Ex: 12300123">
                 </div>
+
                 <div class="col-3">
                     <label class="form-label fw-bold">Logradouro</label>
                     <input type="text" class="form-control" id="fixo" placeholder="Ex: Rua Abc">
                 </div>
+
                 <div class="col-1">
                     <label class="form-label fw-bold">N°</label>
                     <input type="number" class="form-control" id="num" placeholder="N°">
                 </div>
+
                 <div class="col-2">
                     <label class="form-label fw-bold">Bairro</label>
                     <input type="text" class="form-control" id="bairro" placeholder="Bairro">
                 </div>
-            </div><!--3-->
+
+            </div><!--Segunda Linha-->
+
+            <div class="row mb-3"><!--Terceira Linha--> 
+
+                <div class="col-4">
+                    <label class="form-label fw-bold">Cidade</label>
+                    <input type="text" class="form-control" id="Cidade" placeholder="Cidade">
+                </div>
+
+                <div class="col-1">
+                    <label class="form-label fw-bold">UF</label>
+                    <input type="text" class="form-control" id="Cidade" placeholder="UF">
+                </div>
+
+                <div class="col-2">
+                    <label class="form-label fw-bold">Status</label>
+                    <select class="form-select" aria-label="Default select example">
+                    <option selected>Selecione</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    </select>
+                </div>    
+            </div><!--Terceira Linha-->
+
+            <div class="row"><!--Linha dos Botões-->
+
+                <div class="col-12">
+                    <div class="d-flex justify-content-end gap-2">
+                     <input class="btn btn-primary btn btn-danger" type="reset" value="Resetar">
+                     <a class="btn btn-primary btn btn-success" href="#" role="button">Próximo</a>
+                    </div>
+                </div>
+            </div><!--Linha dos Botões-->
+
             
         </div><!--1-->
 
