@@ -12,19 +12,19 @@
 <form method="post">
 <div class="mb-3">
               <label for="numero" class="form-label">Informe o primeiro número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n1" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o segundo número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n2" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o terceiro número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n3" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o quarto número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n4" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o quinto número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n5" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o sexto número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n6" name="numeros[]" class="form-control" required="">
               <label for="numero" class="form-label">Informe o sétimo número:</label>
-              <input type="number"  name="numeros[]" class="form-control" required="">
+              <input type="number" id="n7" name="numeros[]" class="form-control" required="">
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
