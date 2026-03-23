@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -16,12 +16,12 @@
         <div class="row mb-3"> <!-- 2-->
             <div class="col-md-4"> 
                 <label class="form-label">Nome</label>
-                <input type="text" class="form-control" placeholder="Ex: Bruno">
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: Bruno" required="">
                 </div>
 
                 <div class="col-md-4">
                 <label class="form-label">Sobrenome</label>
-                <input type="text" class="form-control" placeholder="Ex: Venturin">
+                <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Ex: Venturin" required="">
                 </div>
 
                 <div class="col-md-4">
@@ -29,29 +29,29 @@
 
                 <div class="input-group">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" placeholder="Ex: venturin_bruno">
+                <input type="text" class="form-control" id="user" name="user" placeholder="Ex: venturin_bruno" required="">
                 </div>
         </div><!-- 2-->
 
          <div class="row mb-3"><!-- 3 -->
                 <div class="col-md-6">
                 <label class="form-label">Cidade</label>
-                <input type="text" class="form-control" placeholder="Ex: Parispozino">
+                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Ex: Parispozino" required="">
                 </div>
 
                 <div class="col-md-3">
                 <label class="form-label">Estado</label>
-                <input type="text" class="form-control" placeholder="Ex: São Paulo">
+                <input type="text" class="form-control" id="estado" name="estado" placeholder="Ex: São Paulo" required="">
                 </div>
 
                 <div class="col-md-3">
                 <label class="form-label">CEP</label>
-                <input type="text" class="form-control" placeholder="Ex: 19200000">
+                <input type="text" class="form-control" id="CEP" name="CEP" placeholder="Ex: 19200000" required="">
                 </div>
         </div><!-- 3 -->
 
         <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox">
+                <input class="form-check-input" type="checkbox" id="termo" name="termo" required="">
                 <label class="form-check-label">
                 Aceito os termos e condições
                 </label>

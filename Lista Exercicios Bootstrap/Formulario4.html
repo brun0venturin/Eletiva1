@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
 
                 <div class="col-10">
                     <label class="form-label fw-bold">Nome:</label> 
-                    <input type="text" class="form-control" id="nome" placeholder="Informe o Nome">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe o Nome" required="">
                 </div>
 
             </div><!--1-->
@@ -36,17 +36,17 @@
 
                 <div class="col-3">
                     <label class="form-label fw-bold">CPF:</label> 
-                    <input type="text" class="form-control" id="cpf" placeholder="Informe o CPF">
+                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Informe o CPF" required="">
                 </div>
 
                 <div class="col-5">
                     <label class="form-label fw-bold">Endereco:</label> 
-                    <input type="text" class="form-control" id="endereco" placeholder="Informe o Endereço">
+                    <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Informe o Endereço" required="">
                 </div>
 
                 <div class="col-2">
                     <label class="form-label fw-bold">Nível:</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" id="nivel" name="nivel" required="">
                     <option selected>---</option>
                     <option value="1">Adm</option>
                     <option value="2">Finan</option>
@@ -59,17 +59,17 @@
 
                 <div class="col-5">
                     <label class="form-label fw-bold">Email:</label> 
-                    <input type="email" class="form-control" id="email" placeholder="Informe o Email">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Informe o Email" required="">
                 </div>
 
                 <div class="col-3">
                     <label class="form-label fw-bold">Senha:</label> 
-                    <input type="password" class="form-control" id="senha" placeholder="Informe a Senha">
+                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Informe a Senha" required="">
                 </div>
 
                 <div class="col-2">
                     <label class="form-label fw-bold">Status:</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" id="status" name="status" required="">
                     <option selected>---</option>
                     <option value="1">Ativo</option>
                     <option value="2">Desativado</option>
