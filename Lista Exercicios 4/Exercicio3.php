@@ -26,10 +26,10 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $palavra = $_POST["palavra"];
             $palavra2 = $_POST["palavra2"];
-            if (mb_strpos($palavra1, $palavra2) !== false) {
-                echo "A segunda palavra está contida na primeira.\n";
+            if (mb_strpos($palavra, $palavra2) !== false) {
+                echo "$palavra2 está contida em $palavra";
             } else {
-                echo "A segunda palavra NÃO está contida na primeira.\n";
+                echo "A segunda palavra não está contida na primeira";
             }
         }
         ?>
