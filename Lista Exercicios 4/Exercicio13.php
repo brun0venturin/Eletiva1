@@ -18,6 +18,28 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $frase = $_POST['frase'];
+
+            $palavras = explode(' ', trim($frase));
+
+            $total = 0;
+            $maior = "";
+
+            foreach ($palavras as $p) {
+                if ($p != "") {
+                    $total++;
+                    if (mb_strlen($p, 'UTF-8') > mb_strlen($maior, 'UTF-8')) {
+                        $maior = $p;
+                    }
+                }
+            }
+
+            echo "Total de palavras: $total<br>";
+            echo "Maior palavra: $maior<br>";
+        }
+        ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </div>
 </body>

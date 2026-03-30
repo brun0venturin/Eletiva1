@@ -24,6 +24,7 @@
 
             $frase = mb_strtolower($frase, 'UTF-8');
             $vogais = ['a', 'e', 'i', 'o', 'u'];
+            $usadas = [];
 
             $contador = 0;
 
@@ -31,10 +32,13 @@
                 $letra = mb_substr($frase, $i, 1, 'UTF-8');
                 if (in_array($letra, $vogais)) {
                     $contador++;
+                    $usadas[] = $letra;
+
                 }
             }
 
             echo "Quantidade de vogais: $contador<br>";
+            echo "Vogais encontradas: ". implode(", ", $usadas);
         }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
