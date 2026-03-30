@@ -18,6 +18,24 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nome = $_POST['nome'];
+
+            $partes = explode(' ', trim($nome));
+
+            $iniciais = "";
+
+            foreach ($partes as $p) {
+                if ($p != "") {
+                    $iniciais .= strtoupper($p[0]) . ".";
+                }
+            }
+
+            echo "Iniciais: $iniciais<br>";
+        }
+
+        ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </div>
 </body>

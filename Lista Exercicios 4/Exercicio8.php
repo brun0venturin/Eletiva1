@@ -18,8 +18,28 @@
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $frase = $_POST['frase'];
+
+            $frase = mb_strtolower($frase, 'UTF-8');
+            $vogais = ['a', 'e', 'i', 'o', 'u'];
+
+            $contador = 0;
+
+            for ($i = 0; $i < mb_strlen($frase, 'UTF-8'); $i++) {
+                $letra = mb_substr($frase, $i, 1, 'UTF-8');
+                if (in_array($letra, $vogais)) {
+                    $contador++;
+                }
+            }
+
+            echo "Quantidade de vogais: $contador<br>";
+        }
+        ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </div>
+
 </body>
 
 </html>
