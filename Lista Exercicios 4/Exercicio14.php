@@ -19,7 +19,23 @@
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $palavra = $_POST['palavra'];
 
+            $original = mb_strtolower($palavra, 'UTF-8');
+
+            $invertida = "";
+
+            for ($i = mb_strlen($original, 'UTF-8') - 1; $i >= 0; $i--) {
+                $invertida .= mb_substr($original, $i, 1, 'UTF-8');
+            }
+
+            if ($original == $invertida) {
+                echo "A palavra: ", $original, ". É palíndromo";
+            } else {
+                echo "A palavra: ", $original, ". Não é palíndromo";
+            }
+        }
         ?>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     </div>
