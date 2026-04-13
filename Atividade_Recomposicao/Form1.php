@@ -69,7 +69,7 @@
                 case "tabuada":
                     for ($i = 1; $i <= 10; $i++) {
                         $resu = $num1 * $i;
-                        echo "$num1 x $i = $resu <br>";
+                        echo "<p>$num1 x $i = $resu </p>";
                     }
                     break;
 
