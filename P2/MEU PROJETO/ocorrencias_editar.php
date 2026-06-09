@@ -1,6 +1,5 @@
 <?php
 
-require("cabecalho.php");
 require("conexao.php");
 
 $id = $_GET['id'] ?? null;
@@ -64,7 +63,7 @@ try {
 require("cabecalho.php");
 ?>
 
-<div class="container mt-4">
+<div class="container mt-3">
 
     <h2>Editar Ocorrência</h2>
 

@@ -52,6 +52,12 @@ $ocorrencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h2>Ocorrências</h2>
 </div>
 
+<?php if (isset($_GET['cadastro']) && $_GET['cadastro'] == 'true'): ?>
+    <div class="alert alert-success">
+        Ocorrência registrada com sucesso!
+    </div>
+<?php endif; ?>
+
 <div class="card mb-4">
     <div class="card-header">Filtros</div>
 
