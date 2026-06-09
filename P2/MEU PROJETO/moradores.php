@@ -37,9 +37,16 @@ $moradores = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h2>Moradores</h2>
 </div>
 
-<?php if (isset($_GET['cadastro']) && $_GET['cadastro'] == 'true'): ?>
+<?php 
+if (isset($_GET['cadastro']) && $_GET['cadastro'] == 'true'): ?>
     <div class="alert alert-success">
         Morador cadastrado com sucesso!
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_GET['erro_excluir']) && $_GET['erro_excluir'] == 'vinculado'): ?>
+    <div class="alert alert-danger">
+        Esse morador não pode ser excluído, pois já foram atribuídos registros em seu nome.
     </div>
 <?php endif; ?>
 
