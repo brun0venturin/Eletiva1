@@ -60,7 +60,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="dropdown2">
               <li><a class="dropdown-item" href="ocorrencias.php">Consultar</a></li>
-              <li><a class="dropdown-item" href="ocorrencias_registar.php">Registrar</a></li>
+              <li><a class="dropdown-item" href="ocorrencias_registrar.php">Registrar</a></li>
             </ul>
           </li>
 
