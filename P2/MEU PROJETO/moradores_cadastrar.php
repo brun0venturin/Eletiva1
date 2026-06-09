@@ -50,6 +50,8 @@
   </div>
 
 <?php
+require("cabecalho.php");
+
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     require("conexao.php");
 

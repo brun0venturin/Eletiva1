@@ -11,6 +11,7 @@
 <body>
 
 <?php
+require("cabecalho.php");
 require("conexao.php");
 
 try {
