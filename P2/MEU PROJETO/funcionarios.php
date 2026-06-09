@@ -74,7 +74,7 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         Pesquisar
                     </button>
 
-                    <a href="funcionarios_consultar.php" class="btn btn-secondary">
+                    <a href="funcionarios.php" class="btn btn-secondary">
                         Limpar
                     </a>
 

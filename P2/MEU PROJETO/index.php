@@ -24,15 +24,7 @@
 
           <div class="card-body p-4">
 
-            <?php
-              if (isset($_GET['cadastro'])) {
-                $cadastro = $_GET['cadastro'];
-                if ($cadastro) {
-                  echo "<div class='alert alert-success'>Cadastro realizado com sucesso!</div>";
-                } else {
-                  echo "<div class='alert alert-danger'>Erro ao realizar o cadastro!</div>";
-                }
-              }
+            <?php       
 
               if($_SERVER['REQUEST_METHOD'] == "POST"){
                 require('conexao.php');
