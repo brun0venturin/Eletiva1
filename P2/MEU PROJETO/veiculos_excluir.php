@@ -1,18 +1,20 @@
 <?php
 
-require("cabecalho.php");
 require("conexao.php");
 
 $id = $_GET['id'] ?? null;
 
 if (!$id) {
-    echo "ID inválido.";
+    header("location: veiculos.php?excluido=false");
     exit;
 }
 
 try {
 
-    $stmt = $pdo->prepare("DELETE FROM veiculos WHERE id_veiculo = ?");
+    $stmt = $pdo->prepare("
+        DELETE FROM veiculos 
+        WHERE id_veiculo = ?
+    ");
 
     if ($stmt->execute([$id])) {
         header("location: veiculos.php?excluido=true");
@@ -22,8 +24,15 @@ try {
         exit;
     }
 
-} catch (Exception $e) {
-    echo "Erro ao excluir veículo: " . $e->getMessage();
+} catch (PDOException $e) {
+
+    if ($e->getCode() == 23000) {
+        header("location: veiculos.php?erro_excluir=vinculado");
+        exit;
+    }
+
+    header("location: veiculos.php?excluido=false");
+    exit;
 }
 
 ?>

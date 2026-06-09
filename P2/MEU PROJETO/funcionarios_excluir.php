@@ -1,11 +1,11 @@
 <?php
-require("cabecalho.php");
+
 require("conexao.php");
 
 $id = $_GET['id'] ?? null;
 
 if (!$id) {
-    echo "ID inválido.";
+    header("location: funcionarios.php?excluido=false");
     exit;
 }
 
@@ -24,8 +24,15 @@ try {
         exit;
     }
 
-} catch (Exception $e) {
-    echo "Erro ao excluir: " . $e->getMessage();
+} catch (PDOException $e) {
+
+    if ($e->getCode() == 23000) {
+        header("location: funcionarios.php?erro_excluir=vinculado");
+        exit;
+    }
+
+    header("location: funcionarios.php?excluido=false");
+    exit;
 }
 
 ?>

@@ -37,6 +37,12 @@ $funcionarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h2>Funcionários</h2>
 </div>
 
+<?php if (isset($_GET['erro_excluir']) && $_GET['erro_excluir'] == 'vinculado'): ?>
+    <div class="alert alert-danger">
+        Esse funcionário não pode ser excluído, pois já foram atribuídos registros a ele.
+    </div>
+<?php endif; ?>
+
 <div class="card mb-4">
     <div class="card-header">
         Filtros
